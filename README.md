@@ -107,12 +107,12 @@ Copy code
 ## Output Visualizations
 
 ### Hidden Markov Model – Regime Detection
-![HMM Regime Detection](outputs/output.png)
+![HMM Regime Detection](output.png)
 
 ---
 
 ### Strategy Performance & Volatility Analysis
-![Strategy Performance](outputs/output1.png)
+![Strategy Performance](output1.png)
 
 ---
 
