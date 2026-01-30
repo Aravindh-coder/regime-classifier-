@@ -78,7 +78,7 @@ Regime transition probabilities from the HMM are used to:
 - Predict the most likely next regime
 - Quantify regime persistence and switching behavior
 
----
+
 
 ### 7. Strategy Adaptation & Risk Scaling
 Trading exposure is dynamically adjusted based on detected regimes:
@@ -88,7 +88,7 @@ Trading exposure is dynamically adjusted based on detected regimes:
 
 This reflects **real-world risk management practices**.
 
----
+
 
 ### 8. Backtesting
 A regime-based strategy is backtested to evaluate:
@@ -96,64 +96,22 @@ A regime-based strategy is backtested to evaluate:
 - Risk-adjusted performance
 - Impact of regime-aware position sizing
 
----
+
 
 ## Project Structure
 regime-classifier/ │ ├── data/ │   └── market_data.csv │ ├── src/ │   ├── data_loader.py │   ├── features.py │   ├── hmm_model.py │   ├── garch_model.py │   ├── clustering.py │   ├── regime_predictor.py │   ├── strategy.py │   ├── backtest.py │   └── app.py │ ├── outputs/ │   ├── output.png │   └── output1.png │ ├── notebooks/ │   └── research.ipynb │ ├── requirements.txt └── README.md
 Copy code
 
----
+
 
 ## Output Visualizations
 
 ### Hidden Markov Model – Regime Detection
 ![HMM Regime Detection](output.png)
 
----
+
 
 ### Strategy Performance & Volatility Analysis
 ![Strategy Performance](output1.png)
 
----
 
-## How to Run the Project
-
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
-2. Run the Dashboard
-Copy code
-Bash
-streamlit run src/app.py
-The dashboard will display:
-Detected market regimes
-Volatility dynamics
-Regime-based strategy performance
-Data Source
-Market data is programmatically fetched using Yahoo Finance (yfinance) and stored locally to ensure reproducibility and auditability.
-Key Insights
-Financial markets exhibit persistent regime behavior
-Volatility clustering is effectively captured using GARCH models
-Regime-aware strategies improve risk control during high-volatility periods
-Probabilistic models are suitable for real-world regime classification problems
-Limitations
-Regime labels are model-dependent and not directly observable
-Transaction costs are not included
-Model performance depends on chosen features and parameters
-Disclaimer
-This project is intended for educational and research purposes only and does not constitute financial or investment advice.
-Copy code
-
----
-
-## ✅ FINAL NOTES (IMPORTANT)
-- Images **must be pushed** to `outputs/output.png` and `outputs/output1.png`
-- Filenames are **case-sensitive**
-- README will render images automatically on GitHub (even in private repos)
-
-If you want next:
-- 📄 **PDF documentation**
-- 📊 **Sharpe ratio / drawdown metrics**
-- 🎯 **Interview explanation points**
-
-Just tell me — you’re already at a **very strong submission level** 💪
